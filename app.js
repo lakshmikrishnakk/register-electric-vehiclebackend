@@ -42,6 +42,10 @@ app.post("/add-vehiclebooking", async (request, response) => {
     response.json({ "status": "success" })
 })
 
+app.post("/view-allbooking", async (request, response) => {
+    const data = await course.find();
+    response.json(data);
+});
 
 
 app.listen(3000, () => {
